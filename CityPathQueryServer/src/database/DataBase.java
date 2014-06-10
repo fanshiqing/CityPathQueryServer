@@ -133,7 +133,7 @@ public class DataBase {
 	 * just for test
 	 */
 	public static void main (String[] args) {
-		UserInfo userInfo = new UserInfo("l6y54y", "b", "c", "d");
+		UserInfo userInfo = new UserInfo("l6yk", "b", "c", "d");
 		sqlInsertUserInfo(userInfo);
 		ConnectionPool.getInstance().closePool();
 	}

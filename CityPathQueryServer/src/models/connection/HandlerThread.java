@@ -1,11 +1,10 @@
 package models.connection;
 
-import java.net.Socket;
-
 import database.DataBase;
 import models.user.UserInfo;
 
-public class HandlerThread extends Thread{
+public class HandlerThread implements Runnable {
+	
 	Connection connection;
 	public HandlerThread (Connection connection) {
 		this.connection = connection;
@@ -42,6 +41,5 @@ public class HandlerThread extends Thread{
 			
 			
 		}
-		super.run();
 	}
 }

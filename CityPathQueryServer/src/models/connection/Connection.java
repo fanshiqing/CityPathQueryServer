@@ -12,7 +12,8 @@ import java.net.UnknownHostException;
 import models.user.UserInfo;
 
 /**
- * 描述：与客户端之间的连接类，用于与客户端建立连接，并用该连接发送所有需要向客户端发送的请求，在收到回复后返回
+ * 描述：与客户端之间的连接类，用于与客户端建立连接，并用该连接发送所有需要向客户端发送的请求，
+ *      在收到回复后返回
  * @author 董剑峰
  *
  */

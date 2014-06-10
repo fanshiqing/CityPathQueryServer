@@ -44,7 +44,10 @@ public class UserInfo implements Serializable {
 	 * @param homeCity 当没有值时，传入空字符串""
 	 */
 	public UserInfo(String name,String password,String email,String homeCity){
-		
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.homeCity = homeCity;
 	}
 	
 	

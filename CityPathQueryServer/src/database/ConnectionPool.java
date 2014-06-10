@@ -11,12 +11,12 @@ public class ConnectionPool {
     private Vector<Connection> pool;
 
     private String driverClassName = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://114.212.133.217:3306/project";
+    private String url = "jdbc:mysql://127.0.0.1:3306/project";
  //   private String url = "jdbc:mysql://172.26.102.85:3306/project";
     
-    private String username = "user";
+    private String username = "root";
 
-    private String password = "pwd";
+    private String password = "fsq0924";
 
     /**
      * 连接池的大小�?
