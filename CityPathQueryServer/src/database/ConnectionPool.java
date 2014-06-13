@@ -1,5 +1,9 @@
 package database;
 
+/**
+ * 这个.java文件需要修改编码格式为UTF-8
+ */
+
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -19,22 +23,22 @@ public class ConnectionPool {
     private String password = "fsq0924";
 
     /**
-     * 连接池的大小�?
+     * 连接池的大小�?
      */
     private int poolSize = 10;
 
     private static ConnectionPool instance = null;
 
     /**
-     * 私有的构造方法，禁止外部创建本类的对象，要想获得本类的对象，通过getIstance方法�?
-     * 使用了设计模式中的Singleton�?
+     * 私有的构造方法，禁止外部创建本类的对象，要想获得本类的对象，通过getIstance方法�?
+     * 使用了设计模式中的Singleton�?
      */
     private ConnectionPool() {
         init();
     }
 
     /**
-     * 连接池初始化方法，读取属性文件的内容 建立连接池中的初始连�?
+     * 连接池初始化方法，读取属性文件的内容 建立连接池中的初始连�?
      */
     private void init() {
         pool = new Vector<Connection>(poolSize);
@@ -43,7 +47,7 @@ public class ConnectionPool {
     }
 
     /**
-     * 返回连接到连接池�?
+     * 返回连接到连接池�?
      */
     public synchronized void release(Connection conn) {
     	System.out.println("release connection successfully" +  "\n");
@@ -71,7 +75,7 @@ public class ConnectionPool {
     }
 
     /**
-     * 返回当前连接池的�?个对�?
+     * 返回当前连接池的�?个对�?
      */
     public static ConnectionPool getInstance() {
         if (instance == null) {
@@ -115,7 +119,7 @@ public class ConnectionPool {
     }
 
     /**
-     * 读取设置连接池的属�?�文�?
+     * 读取设置连接池的属�?�文�?
      */
     
     private void readConfig() {
@@ -131,7 +135,7 @@ public class ConnectionPool {
             this.poolSize = Integer.parseInt(props.getProperty("poolSize"));
         } catch (Exception e) {
             e.printStackTrace();
-            System.err.println("读取属�?�文件出�?. ");        
+            System.err.println("读取属�?�文件出�?. ");        
         }
     }
    
